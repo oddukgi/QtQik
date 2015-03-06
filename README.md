@@ -3,4 +3,4 @@
 * Make window form using Qt Creator.
 
 ##일정
-* 3/6 ~ 5월 말 
+* 2015년 3월 ~ 5월 말 
