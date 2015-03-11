@@ -4,4 +4,8 @@
 * Qt Ver : Qt 5.4.1 & Qt Creator 3.3.1
 
 ##일정
-* 2015년 3월 ~ 5월 말 
+* 2015년 3월 1주:
+
+![tab_btn.png](https://github.com/darongyi/QtDemoDlg/blob/master/tab_btn.png)  
+
+
