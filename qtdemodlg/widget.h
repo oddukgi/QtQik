@@ -20,6 +20,11 @@ public:
     void CreateTabButtons();
 
 
+private slots:
+    void on_pushMin_clicked();
+
+    void on_pushExit_clicked();
+
 private:
     Ui::Widget *ui;
 };

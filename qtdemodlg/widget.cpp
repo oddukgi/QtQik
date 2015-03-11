@@ -96,3 +96,15 @@ Widget::~Widget()
 }
 
 
+
+void Widget::on_pushMin_clicked()
+{
+    QWidget::setWindowState(Qt::WindowMinimized);
+}
+
+void Widget::on_pushExit_clicked()
+{
+  QWidget::close();
+}
+
+
