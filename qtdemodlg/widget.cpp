@@ -88,10 +88,6 @@ void Widget::CreateTabButtons()
 
 
 
-
-
-
-
 }
 
 Widget::~Widget()

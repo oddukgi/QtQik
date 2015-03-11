@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>80</y>
-     <width>631</width>
-     <height>271</height>
+     <y>88</y>
+     <width>761</width>
+     <height>331</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -32,9 +32,9 @@
   <widget class="QPushButton" name="pushBtn_Graph2">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>30</y>
-     <width>101</width>
+     <x>220</x>
+     <y>29</y>
+     <width>111</width>
      <height>27</height>
     </rect>
    </property>
@@ -45,7 +45,7 @@
   <widget class="QPushButton" name="pushBtn_Raw">
    <property name="geometry">
     <rect>
-     <x>560</x>
+     <x>540</x>
      <y>30</y>
      <width>101</width>
      <height>27</height>
@@ -58,9 +58,9 @@
   <widget class="QPushButton" name="pushBtn_Graph1">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>110</x>
      <y>30</y>
-     <width>101</width>
+     <width>121</width>
      <height>27</height>
     </rect>
    </property>
@@ -71,8 +71,8 @@
   <widget class="QPushButton" name="pushBtn_Value">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>30</y>
+     <x>420</x>
+     <y>29</y>
      <width>121</width>
      <height>27</height>
     </rect>
@@ -84,8 +84,8 @@
   <widget class="QPushButton" name="pushBtn_Schedule">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>30</y>
+     <x>320</x>
+     <y>29</y>
      <width>101</width>
      <height>27</height>
     </rect>
