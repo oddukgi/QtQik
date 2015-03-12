@@ -1,15 +1,22 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>res/min2.png</file>
-        <file>res/min1.png</file>
-        <file>res/exit2.png</file>
-        <file>res/exit1.png</file>
-        <file>res/Imgpush_6.png</file>
-        <file>res/Imgpush_5.png</file>
-        <file>res/Imgpush_4.png</file>
-        <file>res/Imgpush_3.png</file>
-        <file>res/Imgpush_2.png</file>
-        <file>res/Imgpush_1.jpg</file>
+        <file>../res/min2.png</file>
+        <file>../res/min1.png</file>
+        <file>../res/exit2.png</file>
+        <file>../res/exit1.png</file>
+        <file>../res/Imgpush_6.png</file>
+        <file>../res/Imgpush_5.png</file>
+        <file>../res/Imgpush_4.png</file>
+        <file>../res/Imgpush_3.png</file>
+        <file>../res/Imgpush_2.png</file>
+        <file>../res/Imgpush_1.jpg</file>
+        <file>../res/Img_user.png</file>
+        <file>../res/Img6.png</file>
+        <file>../res/Img5.png</file>
+        <file>../res/Img4.png</file>
+        <file>../res/Img3.png</file>
+        <file>../res/Img2.png</file>
+        <file>../res/Img.png</file>
     </qresource>
 </RCC>
