@@ -55,29 +55,20 @@ Window {
     property int columnWidth: window.width / 5
 
     GridLayout {
-        width: 612
-        height: 448
-        anchors.horizontalCenterOffset: 0
-        anchors.topMargin: 16
         rowSpacing: 12
         columnSpacing: 30
         anchors.top: parent.top
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.horizontalCenter: parent.horizontalleft
         anchors.margins: 30
 
         TabView {
-            clip: false
-            z: -1
-            Layout.row: 5
+            Layout.row: 6
             Layout.columnSpan: 3
             Layout.fillWidth: true
             implicitHeight: 30
-            Tab { title: "" ; Item { id: item1; scale: 0.01} }
+            Tab { title: "" ; Item { id: item1}}
+            Tab { title: "" ; Item { id: item2 ;opacity: 1}}
             style: tabViewStyle
-            //Tab { title: "Two" ; Item { id: item2} }
-            //Tab { title: "Three" ; Item { id: item3} }
-            //Tab { title: "Four" ; Item { id: item4} }
-
         }
     }
     // Style delegates:
@@ -226,7 +217,7 @@ Window {
 
     property Component tabViewStyle: TabViewStyle {
         tabOverlap: 16
-        frameOverlap: 4
+        frameOverlap: 2
         tabsMovable: true
 
         frame: Rectangle {
@@ -239,14 +230,13 @@ Window {
         }
         tab: Item {
 
-            id: item4
-            property int totalOverlap: tabOverlap * (control.count - 1)
-            implicitWidth: Math.min ((styleData.availableWidth + totalOverlap)/control.count - 4, image.sourceSize.width)
+                property int totalOverlap: tabOverlap * (control.count - 1)
+            implicitWidth: Math.min ((styleData.availableWidth + totalOverlap)/control.count-2 , image.sourceSize.width)
             implicitHeight: image.sourceSize.height
             BorderImage {
                 id: image
                 anchors.fill: parent
-                source: styleData.selected ? "images/tab_selected.png" : "images/tab.png"
+                source: styleData.selected ? "res/Img.png" : "res/Imgpush_1.jpg"
                 border.left: 30
                 smooth: false
                 border.right: 30
