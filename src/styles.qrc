@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>images/tab.png</file>
+        <file>images/tab_selected.png</file>
+    </qresource>
+</RCC>
