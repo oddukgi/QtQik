@@ -1,10 +1,15 @@
+
+QT += widgets
 TEMPLATE = app
 TARGET = styles
-QT += qml quick
 
 SOURCES += \
-    main.cpp
-RESOURCES += \
-    styles.qrc
-OTHER_FILES += \
-    main.qml
+    main.cpp \
+    configure.cpp
+RESOURCES += styles.qrc
+FORMS += \
+    configure.ui
+
+HEADERS += \
+    configure.h \
+    testtabbar.h
