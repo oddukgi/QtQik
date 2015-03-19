@@ -3,10 +3,9 @@
 * Make window form using Qt Creator.
 
 ##예상 화면 디자인 
-*Tab Control*
+*Tab Control,FramelessWindow*
 
 ![tab_btn.png](https://github.com/darongyi/QtDemoDlg/blob/master/tab_btn.png) 
 
-*Frameless Window*
 
 
