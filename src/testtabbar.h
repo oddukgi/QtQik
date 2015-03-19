@@ -15,17 +15,36 @@ class TestTabBar : public QTabBar
         }
 
     protected:
-        QSize tabSizeHint(int) const
+         QSize tabSizeHint(int index) const
         {
-            return QSize(113,50);
-        }
+            QSize m_size;
+
+            if( index==0)
+             m_size = QSize(94,50);
+            else if(index==1)
+             m_size = QSize(113,50);
+            else if(index==2)
+             m_size = QSize(113,50);
+            else if(index ==3)
+             m_size = QSize(115,50);
+            else if(index==4)
+             m_size = QSize(129,50);
+            else if(index ==5)
+             m_size = QSize(113,50);
+
+
+
+            return m_size;
+
+         }
 
 
 
 
-        void paintEvent(QPaintEvent *){
+        void paintEvent(QPaintEvent *)
+        {
+
             QStylePainter p(this);
-
 
              for (int index = 0; index < count(); index++)
              {
@@ -34,6 +53,8 @@ class TestTabBar : public QTabBar
 
 
                       QIcon tempIcon = tabIcon(index);
+
+
                       QString tempText = this->tabText(index);
 
                       QRect tabrect = tabRect(index);
@@ -44,11 +65,15 @@ class TestTabBar : public QTabBar
                       p.drawControl(QStyle::CE_TabBarTab, tab);
                       tabrect.adjust(0, 0, 0, 0);
 
-                    //  p.setPen(Qt::black);
-                    //  p.setFont(QFont("Arial", 7));
+                      /**
+                       * @brief Push Tab : Change Icon Image
+                       *
+                       */
 
-                      //p.drawText(tabrect, Qt::AlignBottom | Qt::AlignHCenter, tempText );
+
+                      this->setIconSize(QSize(tabrect.width(),tabrect.height()));
                       tempIcon.paint(&p, tabrect, Qt::AlignTop | Qt::AlignLeft);
+
 
                       this->setTabIcon(index, tempIcon );
                       this->setTabText( index, tempText);
@@ -56,7 +81,14 @@ class TestTabBar : public QTabBar
 
               }
         }
+
+
 };
+
+        //  p.setPen(Qt::black);
+        //  p.setFont(QFont("Arial", 7));
+        //p.drawText(tabrect, Qt::AlignBottom | Qt::AlignHCenter, tempText );
+
 
 class TestTabWidget : public QTabWidget
 {

@@ -7,8 +7,8 @@ configure::configure(QWidget *parent) :
     ui(new Ui::configure)
 {
     ui->setupUi(this);
-    CreateTabBar();
- //   CreateTabIcon();
+  //  CreateTabBar();
+    CreateTabIcon();
 }
 
 configure::~configure()
@@ -27,17 +27,29 @@ void configure::CreateTabBar()
 
     // Use TabWidget, Make Tab
     TestTabWidget* test = new TestTabWidget(this);
-     test->setGeometry(20, 20, 300, 200);
+    test->setGeometry(20, 20, 800, 300);
 
 
-     test->addTab(new QWidget(), QIcon(":/res/Img.png"), "");
-     test->addTab(new QWidget(), QIcon(":/res/Img2.png"), "");
-     test->setTabPosition(QTabWidget::North);
+//    test->setStyleSheet(
+//                         "QTabBar::tab:selected { background: lightgray; } "
+//                         "QTabWidget::pane { border: 0; } "
+//                         "QTabBar::tab:first:selected { background: url(:/images/common/Imgpush_1.jpg) }"
+//                         );
+
+    test->addTab(new QWidget(), QIcon(":/res/Img.png"), "");
+    test->addTab(new QWidget(), QIcon(":/res/Img2.png"), "");
+    test->addTab(new QWidget(), QIcon(":/res/Img3.png"), "");
+    test->addTab(new QWidget(), QIcon(":/res/Img4.png"), "");
+    test->addTab(new QWidget(), QIcon(":/res/Img5.png"), "");
+    test->addTab(new QWidget(), QIcon(":/res/Img6.png"), "");
+
+
+    test->setTabPosition(QTabWidget::North);
 
 
 }
 
-/*void configure::CreateTabIcon()
+void configure::CreateTabIcon()
 {
     QListWidgetItem *BtnHome = new QListWidgetItem(ui->listWidget);
     BtnHome->setIcon(QIcon(":/res/Img.png"));
@@ -70,4 +82,4 @@ void configure::CreateTabBar()
     BtnRaw->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 
 }
-*/
+

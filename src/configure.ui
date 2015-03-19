@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>857</width>
-    <height>467</height>
+    <width>789</width>
+    <height>415</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>650</x>
-     <y>420</y>
-     <width>191</width>
-     <height>31</height>
+     <x>590</x>
+     <y>380</y>
+     <width>181</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="orientation">
@@ -29,45 +29,65 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QListWidget" name="listWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>270</y>
-     <width>301</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>667</width>
-     <height>52</height>
-    </size>
-   </property>
-   <property name="spacing">
-    <number>0</number>
-   </property>
-   <property name="viewMode">
-    <enum>QListView::IconMode</enum>
-   </property>
-  </widget>
-  <widget class="QStackedWidget" name="stackedWidget">
+  <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>310</y>
-     <width>811</width>
-     <height>71</height>
+     <y>20</y>
+     <width>751</width>
+     <height>51</height>
     </rect>
    </property>
-   <property name="frameShape">
-    <enum>QFrame::Box</enum>
-   </property>
-   <widget class="QWidget" name="page">
-    <zorder>listWidget</zorder>
-   </widget>
-   <widget class="QWidget" name="page_2"/>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QListWidget" name="listWidget">
+      <property name="iconSize">
+       <size>
+        <width>667</width>
+        <height>52</height>
+       </size>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="viewMode">
+       <enum>QListView::IconMode</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>751</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <zorder>gridLayoutWidget</zorder>
+       <zorder>verticalLayoutWidget</zorder>
+      </widget>
+      <widget class="QWidget" name="page_2"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <zorder>buttonBox</zorder>
+  <zorder>verticalLayoutWidget</zorder>
+  <zorder>verticalLayoutWidget_2</zorder>
+  <zorder>stackedWidget</zorder>
  </widget>
  <resources/>
  <connections>
