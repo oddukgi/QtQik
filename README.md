@@ -4,7 +4,9 @@
 
 ##예상 화면 디자인 
 *Tab Control*
-![tab_btn.png](https://github.com/darongyi/QtDemoDlg/blob/master/tab_btn.png)  
+
+![tab_btn.png](https://github.com/darongyi/QtDemoDlg/blob/master/tab_btn.png) 
+
 *Frameless Window*
 
 
