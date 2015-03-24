@@ -175,6 +175,6 @@ void configure::changePage(QListWidgetItem *current, QListWidgetItem *previous)
 
     // 임시방
 
-    ui->stackedWidget->setCurrentIndex(ui->listWidget->row(current)+2);
+    ui->stackedWidget->setCurrentIndex(ui->listWidget->row(current));
 }
 
