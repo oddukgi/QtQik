@@ -13,17 +13,20 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="Img_Label">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>60</y>
-     <width>531</width>
-     <height>241</height>
+     <y>30</y>
+     <width>551</width>
+     <height>351</height>
     </rect>
    </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
  </widget>

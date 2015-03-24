@@ -29,9 +29,6 @@ configure::configure(QWidget *parent) :
     // Set Label Pos
     ui->Accound_Label->setGeometry(725,69,41,51);
 
-
-
-
 }
 
 configure::~configure()
@@ -176,6 +173,8 @@ void configure::changePage(QListWidgetItem *current, QListWidgetItem *previous)
     if (!current)
         current = previous;
 
-    ui->stackedWidget->setCurrentIndex(ui->listWidget->row(current));
+    // 임시방
+
+    ui->stackedWidget->setCurrentIndex(ui->listWidget->row(current)+2);
 }
 

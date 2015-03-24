@@ -2,7 +2,9 @@
 #define HOMEFORM_H
 
 #include <QWidget>
+#include <QImage>
 
+//*** 화 면그리 기
 namespace Ui {
 class HomeForm;
 }
@@ -17,6 +19,7 @@ public:
 
 private:
     Ui::HomeForm *ui;
+    QImage sourceQImage;   // 원본
 };
 
 #endif // HOMEFORM_H
