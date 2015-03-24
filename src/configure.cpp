@@ -4,14 +4,23 @@
 #include <QMessageBox>
 #include <QDebug>
 
+#include "homeform.h"
+#include "pages.h"
+
 #define APP_NAME "QtQikDemo"
+
+//contentsWidget
 
 configure::configure(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::configure)
 {
     ui->setupUi(this);
+
+    CreateStackedPage();
     CreateTabIcon();
+
+     ui->listWidget->setCurrentRow(0);
 
     //**  투명 윈도우 만들기 **//
     //this->setAttribute(Qt::WA_TranslucentBackground, true);
@@ -37,7 +46,6 @@ void configure::CreateTabBar()
     // Use TabWidget, Make Tab
     TestTabWidget* test = new TestTabWidget(this);
     test->setGeometry(20, 20, 800, 300);
-
 
 //    test->setStyleSheet(
 //                         "QTabBar::tab:selected { background: lightgray; } "
@@ -98,6 +106,30 @@ void configure::CreateTabIcon()
     BtnRaw->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
     BtnRaw->setSizeHint(QSize(111,51));
 
+
+    ui->listWidget->setCurrentItem(0);
+
+    // Signal-Slot
+
+    connect(ui->listWidget, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)),
+            this,SLOT(changePage(QListWidgetItem*,QListWidgetItem*)));
+
+}
+
+
+//** Home,Graph1, Graph2, Schedule,
+//** Value Table, Raw List
+
+void configure::CreateStackedPage()
+{
+ //  pagesWidget = new QStackedWidget(ui->stackedWidget);
+   ui->stackedWidget->addWidget(new HomeForm);
+   ui->stackedWidget->addWidget(new CGraph1Page);
+   ui->stackedWidget->addWidget(new CGraph2Page);
+   ui->stackedWidget->addWidget(new CSchedulePage);
+   ui->stackedWidget->addWidget(new CValueTablePage);
+   ui->stackedWidget->addWidget(new CRawPage);
+
 }
 
 
@@ -115,17 +147,11 @@ void configure::mouseMoveEvent(QMouseEvent *event)
 }
 
 
-
 //** Window Minimize N Exit Event **//
 void configure::on_PushBtn_Min_clicked()
 {
    setWindowState(Qt::WindowMinimized);
 }
-
-
-
-
-
 
 
 void configure::on_PushBtn_Exit_clicked()
@@ -140,3 +166,16 @@ void configure::on_PushBtn_Exit_clicked()
         qDebug() << "No was clicked";
       }
 }
+
+
+
+
+
+void configure::changePage(QListWidgetItem *current, QListWidgetItem *previous)
+{
+    if (!current)
+        current = previous;
+
+    ui->stackedWidget->setCurrentIndex(ui->listWidget->row(current));
+}
+

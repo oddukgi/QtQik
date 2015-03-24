@@ -1,7 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>../res/tab_selected.png</file>
-        <file>../res/tab.png</file>
         <file>../res/min2.png</file>
         <file>../res/min1.png</file>
         <file>../res/exit2.png</file>
@@ -19,5 +17,6 @@
         <file>../res/Img2.png</file>
         <file>../res/Img.png</file>
         <file>../res/Img4.png</file>
+        <file>../res/bg_home.png</file>
     </qresource>
 </RCC>

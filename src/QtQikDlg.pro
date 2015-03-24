@@ -5,11 +5,16 @@ TARGET = styles
 
 SOURCES += \
     main.cpp \
-    configure.cpp
+    configure.cpp \
+    pages.cpp \
+    homeform.cpp
 RESOURCES += styles.qrc
 FORMS += \
-    configure.ui
+    configure.ui \
+    homeform.ui
 
 HEADERS += \
     configure.h \
-    testtabbar.h
+    testtabbar.h \
+    pages.h \
+    homeform.h

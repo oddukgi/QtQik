@@ -9,6 +9,5 @@ int main(int argc, char *argv[])
     configDlg.show();
 
 
-
     return a.exec();
 }

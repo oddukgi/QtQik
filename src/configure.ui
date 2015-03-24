@@ -25,34 +25,10 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="verticalLayoutWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>150</y>
-     <width>741</width>
-     <height>271</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
-     <widget class="QStackedWidget" name="stackedWidget">
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <widget class="QWidget" name="page"/>
-      <widget class="QWidget" name="page_2"/>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="QLabel" name="Accound_Label">
    <property name="geometry">
     <rect>
-     <x>760</x>
+     <x>720</x>
      <y>70</y>
      <width>41</width>
      <height>50</height>
@@ -104,6 +80,12 @@
      <width>695</width>
      <height>51</height>
     </size>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::VLine</enum>
    </property>
    <property name="iconSize">
     <size>
@@ -170,7 +152,28 @@
      <normaloff>:/res/min1.png</normaloff>:/res/min1.png</iconset>
    </property>
   </widget>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>981</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <widget class="QWidget" name="page_3"/>
+   <widget class="QWidget" name="page_4"/>
+  </widget>
  </widget>
+ <tabstops>
+  <tabstop>listWidget</tabstop>
+  <tabstop>Admin_Combo</tabstop>
+  <tabstop>PushBtn_Exit</tabstop>
+  <tabstop>PushBtn_Min</tabstop>
+ </tabstops>
  <resources>
   <include location="styles.qrc"/>
  </resources>

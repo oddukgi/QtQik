@@ -5,6 +5,14 @@
 #include <QTabBar>
 #include <QMouseEvent>
 
+
+
+QT_BEGIN_NAMESPACE
+class QListWidget;
+class QListWidgetItem;
+class QStackedWidget;
+QT_END_NAMESPACE
+
 namespace Ui {
 class configure;
 }
@@ -40,8 +48,11 @@ public:
 
 private slots:
     void on_PushBtn_Min_clicked();
-
     void on_PushBtn_Exit_clicked();
+
+
+public slots:
+    void changePage(QListWidgetItem *current, QListWidgetItem *previous);
 
 private:
 
@@ -49,18 +60,26 @@ private:
     int m_MouseClick_Y_Coordinate;
 
     //**  탭  만들기**//
-    ///** @ 1) Create Tab Bar
-    ///** @ 2) Create Stacked Widget
+    ///** @ 1) Tab Bar
+    ///** @ 2) Stacked Widget
+
+    void CreateListWidget();
     void CreateTabIcon();
     void CreateTabBar();
+    void CreateStackedPage();
 
     //** frame less window mouse drag**//
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
 
     //** close event **//
-   // void closeEvent (QCloseEvent *event);
     Ui::configure *ui;
+
+    // Create Page 6
+    QStackedWidget *pagesWidget;
+
+
 };
+
 
 #endif // CONFIGURE_H
