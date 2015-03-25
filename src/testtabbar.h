@@ -53,8 +53,6 @@ class TestTabBar : public QTabBar
 
 
                       QIcon tempIcon = tabIcon(index);
-
-
                       QString tempText = this->tabText(index);
 
                       QRect tabrect = tabRect(index);
