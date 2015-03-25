@@ -42,8 +42,8 @@
   <widget class="QListWidget" name="SOC_ListView">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>100</y>
+     <x>280</x>
+     <y>330</y>
      <width>221</width>
      <height>191</height>
     </rect>
@@ -52,30 +52,20 @@
   <widget class="QListWidget" name="Grid_ListView">
    <property name="geometry">
     <rect>
-     <x>640</x>
-     <y>30</y>
-     <width>61</width>
-     <height>31</height>
+     <x>560</x>
+     <y>130</y>
+     <width>241</width>
+     <height>171</height>
     </rect>
    </property>
   </widget>
   <widget class="QListWidget" name="Load_ListView">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>20</y>
-     <width>71</width>
-     <height>61</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTableView" name="PV_TableView">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
+     <x>540</x>
      <y>330</y>
-     <width>256</width>
-     <height>192</height>
+     <width>251</width>
+     <height>191</height>
     </rect>
    </property>
   </widget>

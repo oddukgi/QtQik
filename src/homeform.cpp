@@ -16,20 +16,28 @@ HomeForm::HomeForm(QWidget *parent) :
     ui->Img_Label->setPixmap(drawPixmap.scaled(ui->Img_Label->size())); //source image
 
     // PV list view
-    ui->PV_ListView->setGeometry(115,538,100,85);
+    ui->PV_ListView->setGeometry(122,438,100,85);
     ui->PV_ListView->insertItem(0,"3,000W");
     ui->PV_ListView->insertItem(1,"150V");
     ui->PV_ListView->insertItem(2,"20A");
 
     // SOC list view
-    ui->SOC_ListView->setGeometry(115,538,100,85);
+    ui->SOC_ListView->setGeometry(448,438,100,85);
     ui->SOC_ListView->insertItem(0,"3,000W");
     ui->SOC_ListView->insertItem(1,"150V");
     ui->SOC_ListView->insertItem(2,"20A");
 
-    //PV Table View
+    //Grid list View
+    ui->Grid_ListView->setGeometry(859,103,100,85);
+    ui->Grid_ListView->insertItem(0,"3,000W");
+    ui->Grid_ListView->insertItem(1,"150V");
+    ui->Grid_ListView->insertItem(2,"20A");
 
-
+    //Load list view
+    ui->Load_ListView->setGeometry(856,438,100,85);
+    ui->Load_ListView->insertItem(0,"3,000W");
+    ui->Load_ListView->insertItem(1,"150V");
+    ui->Load_ListView->insertItem(2,"20A");
 
 
 }
