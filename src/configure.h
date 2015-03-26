@@ -5,6 +5,8 @@
 #include <QTabBar>
 #include <QMouseEvent>
 
+#include "mynofocusstyle.h"
+
 
 
 QT_BEGIN_NAMESPACE
