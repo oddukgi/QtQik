@@ -67,7 +67,6 @@ private:
 
     void CreateListWidget();
     void CreateTabIcon();
-    void CreateTabBar();
     void CreateStackedPage();
 
     //** frame less window mouse drag**//

@@ -37,33 +37,6 @@ configure::~configure()
 }
 
 
-void configure::CreateTabBar()
-{
-
-    // Use TabWidget, Make Tab
-    TestTabWidget* test = new TestTabWidget(this);
-    test->setGeometry(20, 20, 800, 300);
-
-//    test->setStyleSheet(
-//                         "QTabBar::tab:selected { background: lightgray; } "
-//                         "QTabWidget::pane { border: 0; } "
-//                         "QTabBar::tab:first:selected { background: url(:/images/common/Imgpush_1.jpg) }"
-//                         );
-
-    test->addTab(new QWidget(), QIcon(":/res/Img.png"), "");
-    test->addTab(new QWidget(), QIcon(":/res/Img2.png"), "");
-    test->addTab(new QWidget(), QIcon(":/res/Img3.png"), "");
-    test->addTab(new QWidget(), QIcon(":/res/Img4.png"), "");
-    test->addTab(new QWidget(), QIcon(":/res/Img5.png"), "");
-    test->addTab(new QWidget(), QIcon(":/res/Img6.png"), "");
-
-
-    test->setTabPosition(QTabWidget::North);
-
-
-
-}
-
 void configure::CreateTabIcon()
 {
     ui->listWidget->setStyle( new MyNoFocusStyle );
@@ -119,16 +92,16 @@ void configure::CreateTabIcon()
 
 void configure::CreateStackedPage()
 {
- //  pagesWidget = new QStackedWidget(ui->stackedWidget);
-   ui->stackedWidget->addWidget(new HomeForm);
-   ui->stackedWidget->addWidget(new CGraph1Page);
-   ui->stackedWidget->addWidget(new CGraph2Page);
-   ui->stackedWidget->addWidget(new CSchedulePage);
-   ui->stackedWidget->addWidget(new CValueTablePage);
-   ui->stackedWidget->addWidget(new CRawPage);
-
+    /*
+     * crete new pages and add them to the stacked widget
+     */
+    ui->stackedWidget->addWidget(new HomeForm);
+    ui->stackedWidget->addWidget(new CGraph1Page);
+    ui->stackedWidget->addWidget(new CGraph2Page);
+    ui->stackedWidget->addWidget(new CSchedulePage);
+    ui->stackedWidget->addWidget(new CValueTablePage);
+    ui->stackedWidget->addWidget(new CRawPage);
 }
-
 
 //**Mouse Drage Event **//
 void configure::mousePressEvent(QMouseEvent *event)
@@ -170,11 +143,12 @@ void configure::on_PushBtn_Exit_clicked()
 
 void configure::changePage(QListWidgetItem *current, QListWidgetItem *previous)
 {
-    if (!current)
-        current = previous;
+    // if current item is NULL jump to the first page
+    if (!current) {
+        ui->stackedWidget->setCurrentIndex(0);
+    }
 
-    // 임시방
-
+    // switch to page defined by list widget item row
     ui->stackedWidget->setCurrentIndex(ui->listWidget->row(current));
 }
 
