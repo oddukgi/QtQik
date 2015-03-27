@@ -66,48 +66,48 @@ void configure::CreateTabBar()
 
 void configure::CreateTabIcon()
 {
+    ui->listWidget->setStyle( new MyNoFocusStyle );
+
+    QPalette palette = qApp->palette();
+
+    QLinearGradient buttonGradient(0,0,0,ui->listWidget->height());
+    buttonGradient.setColorAt(0,QColor(50,100,200));
+    buttonGradient.setColorAt(1,QColor(40,60,120));
+
+    palette.setBrush( QPalette::Base, buttonGradient );
+    palette.setBrush( QPalette::Highlight, buttonGradient );
+    palette.setBrush( QPalette::HighlightedText, Qt::white );
+    palette.setBrush( QPalette::Text, Qt::white );
+    ui->listWidget->setPalette(palette);
+    ui->listWidget->setStyleSheet("border: none; font-weight: bold;");
 
     QListWidgetItem *BtnHome = new QListWidgetItem(ui->listWidget);
+    BtnHome->setText(tr("Home"));
     BtnHome->setIcon(QIcon(":/res/Img.png"));
-  //BtnHome->setTextAlignment(Qt::AlignLeft);
-    BtnHome->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-    BtnHome->setSizeHint(QSize(94, 51));
 
     QListWidgetItem *BtnGraph1 = new QListWidgetItem(ui->listWidget);
+    BtnGraph1->setText(tr("Graph #1"));
     BtnGraph1->setIcon(QIcon(":/res/Img2.png"));
-   // BtnGraph1->setTextAlignment(Qt::AlignLeft);
-    BtnGraph1->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-    BtnGraph1->setSizeHint(QSize(113,51));
 
     QListWidgetItem *BtnGraph2 = new QListWidgetItem(ui->listWidget);
+    BtnGraph2->setText(tr("Graph #2"));
     BtnGraph2->setIcon(QIcon(":/res/Img3.png"));
- // BtnGraph2->setTextAlignment(Qt::AlignLeft);
-    BtnGraph2->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-    BtnGraph2->setSizeHint(QSize(113,51));
 
     QListWidgetItem *BtnSchedule = new QListWidgetItem(ui->listWidget);
+    BtnSchedule->setText(tr("Schedule"));
     BtnSchedule->setIcon(QIcon(":/res/Img4.png"));
-   // BtnSchedule->setTextAlignment(Qt::AlignLeft);
-    BtnSchedule->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-    BtnSchedule->setSizeHint(QSize(115,51));
 
     QListWidgetItem *BtnValue = new QListWidgetItem(ui->listWidget);
+    BtnValue->setText(tr("Value Table"));
     BtnValue->setIcon(QIcon(":/res/Img5.png"));
-  //  BtnValue->setTextAlignment(Qt::AlignVCenter);
-    BtnValue->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-    BtnValue->setSizeHint(QSize(129,51));
 
     QListWidgetItem *BtnRaw = new QListWidgetItem(ui->listWidget);
+    BtnRaw->setText(tr("Raw List"));
     BtnRaw->setIcon(QIcon(":/res/Img6.png"));
- //   BtnRaw->setTextAlignment(Qt::AlignVCenter);
-    BtnRaw->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-    BtnRaw->setSizeHint(QSize(111,51));
-
 
     ui->listWidget->setCurrentItem(0);
 
     // Signal-Slot
-
     connect(ui->listWidget, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)),
             this,SLOT(changePage(QListWidgetItem*,QListWidgetItem*)));
 

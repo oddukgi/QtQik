@@ -7,7 +7,8 @@ SOURCES += \
     main.cpp \
     configure.cpp \
     pages.cpp \
-    homeform.cpp
+    homeform.cpp \
+    mynofocusstyle.cpp
 RESOURCES += styles.qrc
 FORMS += \
     configure.ui \
@@ -17,4 +18,5 @@ HEADERS += \
     configure.h \
     testtabbar.h \
     pages.h \
-    homeform.h
+    homeform.h \
+    mynofocusstyle.h
