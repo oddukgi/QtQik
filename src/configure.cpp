@@ -1,16 +1,28 @@
-#include "configure.h"
-#include "ui_configure.h"
-#include "testtabbar.h"
 #include <QMessageBox>
 #include <QDebug>
 
+#include "configure.h"
+#include "ui_configure.h"
+#include "testtabbar.h"
 #include "homeform.h"
 #include "pages.h"
 
 #define APP_NAME "QtQikDemo"
 
-//contentsWidget
+/*!
+    \class configure
+    \brief configure class
+    \inmodule qtqik
 
+    This class is responsible for the main layout of the main widget, creates
+    the gradient tab bar and the pages container
+*/
+
+/*!
+    \fn configure::configure( QWidget *parent )
+
+    Default c'tor with the \a parent QWidget as the default parameter
+*/
 configure::configure(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::configure)
@@ -20,23 +32,30 @@ configure::configure(QWidget *parent) :
     CreateStackedPage();
     CreateTabIcon();
 
-     ui->listWidget->setCurrentRow(0);
+    ui->listWidget->setCurrentRow(0);
 
     //**  투명 윈도우 만들기 **//
     //this->setAttribute(Qt::WA_TranslucentBackground, true);
     //**  테두리 없는 윈도우  만듬**//
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::WindowStaysOnTopHint);
+
     // Set Label Pos
     ui->Accound_Label->setGeometry(725,69,41,51);
-
 }
 
+/*!
+    Default d'tor
+*/
 configure::~configure()
 {
     delete ui;
 }
 
+/*!
+    \fn configure::CreateTabIcon( )
 
+    Create the gradient button tab bar
+*/
 void configure::CreateTabIcon()
 {
     ui->listWidget->setStyle( new MyNoFocusStyle );
@@ -80,21 +99,19 @@ void configure::CreateTabIcon()
 
     ui->listWidget->setCurrentItem(0);
 
-    // Signal-Slot
+    // connect the signal for selection change
     connect(ui->listWidget, SIGNAL(currentItemChanged(QListWidgetItem*,QListWidgetItem*)),
             this,SLOT(changePage(QListWidgetItem*,QListWidgetItem*)));
 
 }
 
+/*!
+    \fn void configure::CreateStackedPage()
 
-//** Home,Graph1, Graph2, Schedule,
-//** Value Table, Raw List
-
+    Create new pages and add them to the QStackedWidget
+*/
 void configure::CreateStackedPage()
 {
-    /*
-     * crete new pages and add them to the stacked widget
-     */
     ui->stackedWidget->addWidget(new HomeForm);
     ui->stackedWidget->addWidget(new CGraph1Page);
     ui->stackedWidget->addWidget(new CGraph2Page);
@@ -103,7 +120,11 @@ void configure::CreateStackedPage()
     ui->stackedWidget->addWidget(new CRawPage);
 }
 
-//**Mouse Drage Event **//
+/*!
+    \fn void configure::mousePressEvent(QMouseEvent *event)
+
+    Handle Mouse Press Event
+*/
 void configure::mousePressEvent(QMouseEvent *event)
 {
   m_MouseClick_X_Coordinate = event->x();
@@ -111,19 +132,31 @@ void configure::mousePressEvent(QMouseEvent *event)
 
 }
 
+/*!
+    \fn void configure::mouseMoveEvent(QMouseEvent *event)
+
+    Handle Mouse Move Event
+*/
 void configure::mouseMoveEvent(QMouseEvent *event)
 {
    move(event->globalX()-m_MouseClick_X_Coordinate,event->globalY()-m_MouseClick_Y_Coordinate);
 }
 
+/*!
+    \fn void configure::on_PushBtn_Min_clicked()
 
-//** Window Minimize N Exit Event **//
+    Window Minimize Event
+*/
 void configure::on_PushBtn_Min_clicked()
 {
    setWindowState(Qt::WindowMinimized);
 }
 
+/*!
+    \fn void configure::on_PushBtn_Exit_clicked()
 
+    Window Exit Event
+*/
 void configure::on_PushBtn_Exit_clicked()
 {
     QMessageBox::StandardButton reply;
@@ -137,18 +170,19 @@ void configure::on_PushBtn_Exit_clicked()
       }
 }
 
+/*!
+    \fn void configure::changePage( QListWidgetItem *current, QListWidgetItem *previous )
 
+    Change the page to the one on the stackedWidget that has the same index as
+    the currently selected item on the tab bar QListWidget.
 
-
-
-void configure::changePage(QListWidgetItem *current, QListWidgetItem *previous)
-{
+    We only need the \a current QListWidgetItem for getting the selected index.
+    \a previous is not needed
+*/
+void configure::changePage(QListWidgetItem *current, QListWidgetItem* ) {
     // if current item is NULL jump to the first page
-    if (!current) {
-        ui->stackedWidget->setCurrentIndex(0);
-    }
+    if (!current) { ui->stackedWidget->setCurrentIndex(0); }
 
     // switch to page defined by list widget item row
     ui->stackedWidget->setCurrentIndex(ui->listWidget->row(current));
 }
-

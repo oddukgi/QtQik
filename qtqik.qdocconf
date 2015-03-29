@@ -1,0 +1,15 @@
+project = QtQik
+description = QtQik Project
+
+sourcedirs = src
+headerdirs = src
+
+outputdir = doc
+outputformats = HTML
+HTML.headerstyles = "<link rel=\"stylesheet\" type=\"text/css\" href=\"style/offline.css\"/>"
+HTML.stylesheets = offline.css
+
+sources.fileextensions = "*.cpp *.qdoc *.mm *.qml"
+headers.fileextensions = "*.h *.ch *.h++ *.hh *.hpp *.hxx"
+examples.fileextensions = "*.cpp *.h *.js *.xq *.svg *.xml *.ui *.qhp *.qhcp *.qml"
+examples.imageextensions = "*.png *.jpeg *.jpg *.gif *.mng"
