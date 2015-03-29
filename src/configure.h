@@ -54,7 +54,7 @@ private slots:
 
 
 public slots:
-    void changePage(QListWidgetItem *current, QListWidgetItem *previous);
+    void changePage(QListWidgetItem *current, QListWidgetItem* );
 
 private:
 
@@ -67,7 +67,6 @@ private:
 
     void CreateListWidget();
     void CreateTabIcon();
-    void CreateTabBar();
     void CreateStackedPage();
 
     //** frame less window mouse drag**//
