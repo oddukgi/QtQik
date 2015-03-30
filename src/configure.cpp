@@ -40,7 +40,7 @@ configure::configure(QWidget *parent) :
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::WindowStaysOnTopHint);
 
     // Set Label Pos
-    ui->Accound_Label->setGeometry(725,69,41,51);
+    ui->Accound_Label->setGeometry(712,69,41,51);
 }
 
 /*!
