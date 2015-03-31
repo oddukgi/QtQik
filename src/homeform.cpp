@@ -4,28 +4,29 @@
 
 #define IMGSOURCE ":res/bg_home.png"
 
-
 /*!
     \class HomeForm
     \brief HomeForm class
     \inmodule qtqik
 
-    Create ListView  on screen
-
+    Create ListView on screen
 */
 
-
-
+/*!
+    Default constructor with \a parent as the default argument
+*/
 HomeForm::HomeForm(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::HomeForm)
 {
     ui->setupUi(this);
     sourceQImage = QImage(IMGSOURCE);
-   ui->Img_Label->setGeometry(0,0,1024,660);
+    ui->Img_Label->setGeometry(0,0,1024,660);
 
     QPixmap drawPixmap = QPixmap::fromImage(sourceQImage);
-    ui->Img_Label->setPixmap(drawPixmap.scaled(ui->Img_Label->size())); //source image
+
+    // source image
+    ui->Img_Label->setPixmap(drawPixmap.scaled(ui->Img_Label->size()));
 
     // PV list view
     ui->PV_ListView->setGeometry(122,438,100,63);
@@ -39,21 +40,22 @@ HomeForm::HomeForm(QWidget *parent) :
     ui->SOC_ListView->insertItem(1,"150V");
     ui->SOC_ListView->insertItem(2,"20A");
 
-    //Grid list View
+    // Grid list View
     ui->Grid_ListView->setGeometry(859,103,100,63);
     ui->Grid_ListView->insertItem(0,"3,000W");
     ui->Grid_ListView->insertItem(1,"150V");
     ui->Grid_ListView->insertItem(2,"20A");
 
-    //Load list view
+    // Load list view
     ui->Load_ListView->setGeometry(856,438,100,63);
     ui->Load_ListView->insertItem(0,"3,000W");
     ui->Load_ListView->insertItem(1,"150V");
     ui->Load_ListView->insertItem(2,"20A");
-
-
 }
 
+/*!
+    Default destructor
+*/
 HomeForm::~HomeForm()
 {
     delete ui;
