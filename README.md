@@ -5,7 +5,7 @@
 
 ## GUI Form
 
-![Toolbar](https://raw.githubusercontent.com/darongyi/QtQik/master/toolbar.png)
+![Toolbar](toolbar.png)
 
 
 ## Creating Project Documentation
