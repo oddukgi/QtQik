@@ -4,7 +4,7 @@
 
 ##GUI Form
 
-![tab_btn.png](https://github.com/darongyi/QtDemoDlg/blob/master/tab_btn.png) 
+![tab_btn.png](https://github.com/darongyi/QtDemoDlg/blob/master/toolbar_.png) 
 
 
 
