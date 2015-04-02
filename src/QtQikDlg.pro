@@ -8,7 +8,8 @@ SOURCES += \
     configure.cpp \
     pages.cpp \
     homeform.cpp \
-    mynofocusstyle.cpp
+    mynofocusstyle.cpp \
+    listviewdelegate.cpp
 RESOURCES += styles.qrc
 FORMS += \
     configure.ui \
@@ -19,4 +20,5 @@ HEADERS += \
     testtabbar.h \
     pages.h \
     homeform.h \
-    mynofocusstyle.h
+    mynofocusstyle.h \
+    listviewdelegate.h
