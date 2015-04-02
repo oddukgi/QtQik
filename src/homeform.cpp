@@ -8,17 +8,20 @@
 
 #define IMGSOURCE ":res/bg_home.png"
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4735ed3628ec16a1d2bbf0c04bfa3434b3e2629f
 /*!
     \class HomeForm
     \brief HomeForm class
     \inmodule qtqik
 
-    Create ListView  on screen
-
+    Create ListView on screen
 */
 
+<<<<<<< HEAD
 
 /*Constant         | Value   |	Description
  ------------------------------------------------------------------------------
@@ -28,18 +31,28 @@ Qt::UserRole	   |  0x0100 |   The first role that can be used for application-sp
 */
 
 
+=======
+/*!
+    Default constructor with \a parent as the default argument
+*/
+>>>>>>> 4735ed3628ec16a1d2bbf0c04bfa3434b3e2629f
 HomeForm::HomeForm(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::HomeForm)
 {
     ui->setupUi(this);
     sourceQImage = QImage(IMGSOURCE);
+<<<<<<< HEAD
 
     //Put Background Image
+=======
+>>>>>>> 4735ed3628ec16a1d2bbf0c04bfa3434b3e2629f
     ui->Img_Label->setGeometry(0,0,1024,660);
 
     QPixmap drawPixmap = QPixmap::fromImage(sourceQImage);
-    ui->Img_Label->setPixmap(drawPixmap.scaled(ui->Img_Label->size())); //source image
+
+    // source image
+    ui->Img_Label->setPixmap(drawPixmap.scaled(ui->Img_Label->size()));
 
 
     ListviewDelegate *m_listdelegate;
@@ -49,6 +62,7 @@ HomeForm::HomeForm(QWidget *parent) :
     QListWidgetItem *item1 = new QListWidgetItem();
     item1->setData(Qt::DisplayRole, "3,000W");
 
+<<<<<<< HEAD
     QListWidgetItem *item2 = new QListWidgetItem();
     item2->setData(Qt::DisplayRole, "150V");
 
@@ -78,6 +92,24 @@ HomeForm::HomeForm(QWidget *parent) :
 
 
 
+=======
+    // Grid list View
+    ui->Grid_ListView->setGeometry(859,103,100,63);
+    ui->Grid_ListView->insertItem(0,"3,000W");
+    ui->Grid_ListView->insertItem(1,"150V");
+    ui->Grid_ListView->insertItem(2,"20A");
+
+    // Load list view
+    ui->Load_ListView->setGeometry(856,438,100,63);
+    ui->Load_ListView->insertItem(0,"3,000W");
+    ui->Load_ListView->insertItem(1,"150V");
+    ui->Load_ListView->insertItem(2,"20A");
+}
+
+/*!
+    Default destructor
+*/
+>>>>>>> 4735ed3628ec16a1d2bbf0c04bfa3434b3e2629f
 HomeForm::~HomeForm()
 {
     delete ui;
