@@ -15,10 +15,20 @@
 
     Create ListView on screen
 
-    Constant         | Value   |	Description
-    ------------------------------------------------------------------------------
-    Qt::DisplayRole  |   0     |  The key data to be rendered in the form of text.(QString)
-    Qt::UserRole	   |  0x0100 |  The first role that can be used for application-specific purposes.
+    \table
+      \header
+        \li Constant
+        \li Value
+        \li Description
+      \row
+        \li Qt::DisplayRole
+        \li 0
+        \li The key data to be rendered in the form of text.(QString)
+      \row
+        \li Qt::UserRole
+        \li 0x0100
+        \li The first role that can be used for application-specific purposes.
+    \endtable
 */
 
 /*!
