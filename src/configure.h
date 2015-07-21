@@ -1,13 +1,8 @@
 #ifndef CONFIGURE_H
 #define CONFIGURE_H
 
-#include <QDialog>
-#include <QTabBar>
-#include <QMouseEvent>
-
-#include "mynofocusstyle.h"
-
-
+#include <QApplication>
+#include "header.h"
 
 QT_BEGIN_NAMESPACE
 class QListWidget;

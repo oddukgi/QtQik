@@ -1,5 +1,5 @@
-#include "mynofocusstyle.h"
-#include <QDebug>
+#include <QApplication>
+#include "header.h"
 
 MyNoFocusStyle::MyNoFocusStyle()
 {

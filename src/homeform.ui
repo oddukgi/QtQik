@@ -29,13 +29,43 @@
     <string/>
    </property>
   </widget>
-  <widget class="QListWidget" name="ListWideget1">
+  <widget class="QListWidget" name="ListWidget_PV">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>330</y>
-     <width>231</width>
-     <height>161</height>
+     <x>50</x>
+     <y>340</y>
+     <width>150</width>
+     <height>150</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget_Battery">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>340</y>
+     <width>150</width>
+     <height>150</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget_Grid">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>50</y>
+     <width>150</width>
+     <height>150</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget_Load">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>300</y>
+     <width>150</width>
+     <height>150</height>
     </rect>
    </property>
   </widget>

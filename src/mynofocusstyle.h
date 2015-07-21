@@ -1,7 +1,8 @@
 #ifndef MYNOFOCUSSTYLE_H
 #define MYNOFOCUSSTYLE_H
 
-#include <QProxyStyle>
+#include <QApplication>
+#include "header.h"
 
 class MyNoFocusStyle : public QProxyStyle
 {

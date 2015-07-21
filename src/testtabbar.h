@@ -1,10 +1,8 @@
 #ifndef TESTTABBAR_H
 #define TESTTABBAR_H
 
-#include <QTabBar>
-#include <QPainter>
-#include <QStylePainter>
-#include <QStyleOptionTab>
+#include <QApplication>
+#include "header.h"
 
 class TestTabBar : public QTabBar
 {
@@ -32,14 +30,9 @@ class TestTabBar : public QTabBar
             else if(index ==5)
              m_size = QSize(113,50);
 
-
-
             return m_size;
 
          }
-
-
-
 
         void paintEvent(QPaintEvent *)
         {
@@ -68,24 +61,18 @@ class TestTabBar : public QTabBar
                        *
                        */
 
-
                       this->setIconSize(QSize(tabrect.width(),tabrect.height()));
                       tempIcon.paint(&p, tabrect, Qt::AlignTop | Qt::AlignLeft);
 
-
                       this->setTabIcon(index, tempIcon );
                       this->setTabText( index, tempText);
-
-
               }
         }
-
-
 };
 
-        //  p.setPen(Qt::black);
-        //  p.setFont(QFont("Arial", 7));
-        //p.drawText(tabrect, Qt::AlignBottom | Qt::AlignHCenter, tempText );
+//  p.setPen(Qt::black);
+//  p.setFont(QFont("Arial", 7));
+//p.drawText(tabrect, Qt::AlignBottom | Qt::AlignHCenter, tempText );
 
 
 class TestTabWidget : public QTabWidget

@@ -1,4 +1,5 @@
-#include "listviewdelegate.h"
+#include <QApplication>
+#include "header.h"
 
 /*
  * ListviewDelegate.cpp

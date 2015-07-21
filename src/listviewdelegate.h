@@ -8,8 +8,8 @@
 #ifndef LISTVIEWDELEGATE_H
 #define LISTVIEWDELEGATE_H
 
-#include <QPainter>
-#include <QAbstractItemDelegate>
+#include <QApplication>
+#include "header.h"
 
 /*
  * To make delegate class, need to override couple of functions,
