@@ -1,8 +1,6 @@
 ## QtQik
 
-* Qt Creator 를 사용하여 화면을 구성해본다.
-* Make window form using Qt Creator.
-
+* This program is about Energy Program to show device data.
 ## GUI Form
 
 ![Toolbar](toolbar.png)
